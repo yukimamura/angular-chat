@@ -1,0 +1,23 @@
+dist: trusty
+sudo: required
+language: node_js
+node_js:
+- stable
+- '6'
+- '4'
+addons:
+  chrome: stable
+cache:
+  apt: true
+  bundler: true
+  directories:
+  - node_modules
+script:
+- ng build --prod
+deploy:
+  provider: firebase
+  token:
+    secure: QDZ7Nu/um/ZbUaSZQHh4Yk/Sftg1MNdPnsN9w2ClyIdSNDpYNDMEJgpPRrXRWL2R0t19fq/6Ur5eEsnI7Nn/xjLb4tnVnjlRdivnmzp6HqImQz5Cgc/76DkQjhwlQcPmKuHsuJ43Q2llx3p1S396+ymx1xKSwjHCri3yPBBL+vNY2aJERJCDimuEAdoEPxLBDHha5i7glvrnUWYngbyKDOg9NEYoBdIWztLLrRSiK+Xp53JCgD8IE2LLt19kTOKhKTk18OgrwGWNt5kFd9xBCOIC1MiSGEKPoK2zcEvzq2NaOqHaXedufTZn40zcU9JllVyPUibmjWACRUXVHzsjQjG0wCSRuLztlP/T4nQf4yezrlRCdJIbX1nlChxm4cBcrU+GJ9z7AuqlsEmfkMKM7yaVJe47qXfSVmAKuorID/jcDO6bd3DHzHTV/Ng5D1sXAJJdlSmo8+o+jvR0EPPBkejpJe2nZ1JDUmc4L7+hOVkycjNC4DToJdKtWPJTKRa0P7ZZQ58+tO6+I/fL8bkbun1UzODZQG+rvJulNg0KyvRO1wL8oimWdOueFR14AvPvSSUO1kAD87U9BKPmNQZS3T3T+mEsnePnZl88WLizUrxVKI+0fFA6L5rVNVTjinTkFjrvVB8ZKbiOflClnl4GF7+NGB1mfhto3A+6+mSb0Ak=
+  skip_cleanup: true
+  on:
+    branch: master
