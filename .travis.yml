@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 language: node_js
 node_js:
-- '8.9.4'
+- '10.9.0'
 addons:
   chrome: stable
 cache:
