@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 //        return false;
 //      }
 //    });
-    return true;
+    return (!false);
   }
   canActivateChild(
     next: ActivatedRouteSnapshot,
