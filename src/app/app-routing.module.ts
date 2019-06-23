@@ -10,8 +10,13 @@ import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', loadChildren: './timeline/timeline.module#TimelineModule' },
   { path: 'users', loadChildren: './users/users.module#UsersModule' },
-  { path: 'signup', component: SignUpComponent, canActivate: [ AuthGuard ] },
-  { path: 'login', component: LoginComponent, canActivate: [ AuthGuard ] },
+
+//  { path: 'signup', component: SignUpComponent, canActivate: [ AuthGuard ] },
+  { path: 'signup', component: SignUpComponent },
+
+//  { path: 'login', component: LoginComponent, canActivate: [ AuthGuard ] },
+  { path: 'login', component: LoginComponent, },
+
   { path: '**', component: NotFoundComponent },
 ];
 
@@ -23,9 +28,10 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  declarations: [],
-  providers: [
-    AuthGuard
-  ]
+  declarations: []
+//  ,
+//  providers: [
+//    AuthGuard
+//  ]
 })
 export class AppRoutingModule { }
