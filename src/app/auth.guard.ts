@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild, CanLoad, Route, UrlSegment,  UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable()
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
@@ -14,14 +14,15 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.afAuth.authState.map(user => {
-      if (!user) {
-        return true;
-      } else {
-        this.router.navigate(['/']);
-        return false;
-      }
-    });
+//    return this.afAuth.authState.map(user => {
+//      if (!user) {
+//        return true;
+//      } else {
+//        this.router.navigate(['/']);
+//        return false;
+//      }
+//    });
+    return true;
   }
   canActivateChild(
     next: ActivatedRouteSnapshot,
