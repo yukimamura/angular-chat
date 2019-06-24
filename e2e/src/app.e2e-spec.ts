@@ -10,7 +10,8 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angular-chat!');
+    browser.sleep(5000);
+    expect(page.getTitleText()).toEqual('Angular Chat!!!');
   });
 
   afterEach(async () => {
