@@ -17,7 +17,7 @@ before_install:
 before_script:
 - ng lint
 - ng test --watch=false --code-coverage
-# - ng e2e
+- ng e2e
 script:
 - ng build --prod
 after_success:
