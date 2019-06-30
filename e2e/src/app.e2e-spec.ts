@@ -26,7 +26,8 @@ describe('workspace-project App', () => {
 
   it('e2eテストの動作確認', () => {
     // URLを指定してWebページを表示
-    browser.get(browser.baseUrl) as Promise<any>;
+//    browser.get(browser.baseUrl) as Promise<any>;
+    browser.get(browser.baseUrl);
     browser.sleep(1000);
     expect(element(by.css('app-root h1')).getText()).toEqual('Angular Chat!!!');
 
