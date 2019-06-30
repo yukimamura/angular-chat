@@ -28,6 +28,7 @@ describe('workspace-project App', () => {
     // URLを指定してWebページを表示
 //    browser.get(browser.baseUrl) as Promise<any>;
 
+
     browser.get(browser.baseUrl);
     browser.sleep(1000);
     expect(element(by.css('app-root h1')).getText()).toEqual('Angular Chat!!!');
