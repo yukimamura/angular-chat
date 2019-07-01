@@ -30,7 +30,8 @@ describe('workspace-project App', () => {
 
     browser.get(browser.baseUrl);
     browser.sleep(1000);
-    expect(element(by.css('app-root h1')).getText()).toEqual('Angular Chat!!!');
+//    expect(element(by.css('app-root h1')).getText()).toEqual('Angular Chat!!!');
+    expect(element(by.css('h1')).getText()).toEqual('Angular Chat!!!');
 
     // ページ内のHTML要素を取得
 //    const textBox1 = element(by.id('textBox1'));
