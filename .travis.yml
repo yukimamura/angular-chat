@@ -22,6 +22,7 @@ before_script:
 script:
 - ng build --prod
 after_success:
+- ls ./coverage/lcov.info
 # - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 deploy:
   provider: firebase
