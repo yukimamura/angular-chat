@@ -18,13 +18,13 @@ before_script:
 - ng lint
 - ng test --watch=false --code-coverage
 # - ls ./coverage/lcov.info
-- find ./ -name "lcov.info"
-- cat ./coverage/angular-chat/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+# - find ./ -name "lcov.info"
 # - ng e2e
 script:
 - ng build --prod
 after_success:
 # - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- cat ./coverage/angular-chat/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 deploy:
   provider: firebase
   token:
