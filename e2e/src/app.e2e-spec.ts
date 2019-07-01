@@ -29,7 +29,7 @@ describe('workspace-project App', () => {
 //    browser.get(browser.baseUrl) as Promise<any>;
 
     browser.get(browser.baseUrl);
-//    browser.sleep(1000);
+    browser.sleep(1000);
 //    expect(element(by.css('app-root h1')).getText()).toEqual('Angular Chat!!!');
     expect(element(by.css('h1')).getText()).toEqual('Angular Chat!!!');
 
@@ -38,21 +38,21 @@ describe('workspace-project App', () => {
 
     // ログイン画面への遷移検証
     signupLink.click();
-//    browser.sleep(1000);
+    browser.sleep(1000);
     expect(browser.getCurrentUrl()).toBe(browser.baseUrl + 'login');
 
     // ログインの動作検証
     element(by.name('email')).sendKeys('use@gmail.com');
     element(by.name('password')).sendKeys('useeng');
-//    browser.sleep(2000);
+    browser.sleep(2000);
     element(by.buttonText('ログイン')).click();
-//    browser.sleep(3000);
+    browser.sleep(3000);
 
     // チャット入力動作検証
     element(by.name('content')).sendKeys('チャット自動入力テスト');
-//    browser.sleep(3000);
+    browser.sleep(3000);
     element(by.buttonText('送信')).click();
-//    browser.sleep(3000);
+    browser.sleep(3000);
   });
 
 });
