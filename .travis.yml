@@ -19,7 +19,7 @@ before_script:
 - ng test --watch=false --code-coverage
 # - ls ./coverage/lcov.info
 - find ./ -name "lcov.info"
-- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- cat ./coverage/angular-chat/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 # - ng e2e
 script:
 - ng build --prod
