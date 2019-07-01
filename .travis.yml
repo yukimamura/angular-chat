@@ -17,7 +17,7 @@ before_install:
 before_script:
 - ng lint
 - ng test --watch=false --code-coverage
-- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js
 # - ng e2e
 script:
 - ng build --prod
